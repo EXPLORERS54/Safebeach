@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Beach</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #212529; }
+    header { background: #0077b6; color: white; padding: 2em 1em; text-align: center; position: relative; }
+    header img { max-width: 80px; }
+    header h1 { margin: 0.5em 0 0.2em; font-size: 2em; }
+    .lang-toggle { position: absolute; top: 1em; right: 1em; font-weight: bold; cursor: pointer; }
+    section { padding: 2em 1em; max-width: 1000px; margin: auto; }
+    h2 { color: #023e8a; }
+    footer { background: #caf0f8; padding: 1em; text-align: center; font-size: 0.9em; }
+    .en { display: none; }
+    form, .buttons { display: flex; flex-direction: column; gap: 1em; margin-top: 2em; }
+    input, textarea { padding: 0.8em; font-size: 1em; border-radius: 5px; border: 1px solid #ccc; }
+    button, .download-btn { background: #0077b6; color: white; padding: 0.8em; font-size: 1em; border: none; border-radius: 5px; text-decoration: none; text-align: center; }
+  </style>
+  <script>
+    function toggleLang() {
+      const fr = document.querySelectorAll('.fr');
+      const en = document.querySelectorAll('.en');
+      const langBtn = document.getElementById('lang-btn');
+      if (langBtn.textContent === 'EN') {
+        fr.forEach(el => el.style.display = 'none');
+        en.forEach(el => el.style.display = 'block');
+        langBtn.textContent = 'FR';
+      } else {
+        fr.forEach(el => el.style.display = 'block');
+        en.forEach(el => el.style.display = 'none');
+        langBtn.textContent = 'EN';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Locker_icon.svg/1200px-Locker_icon.svg.png" alt="Casier">
+    <h1>Safe Beach</h1>
+    <p class="fr">Protégez vos affaires à la plage – Simple. Sûr. Autonome.</p>
+    <p class="en">Secure your belongings at the beach – Simple. Safe. Self-service.</p>
+  </header>
+
+  <section>
+    <h2 class="fr">Pourquoi Safe Beach ?</h2>
+    <h2 class="en">Why Safe Beach?</h2>
+    <p class="fr">Chaque été, des milliers de vacanciers subissent le vol ou la perte de leurs effets personnels sur les plages. Safe Beach apporte une solution concrète avec des casiers connectés, sécurisés et autonomes accessibles à tous.</p>
+    <p class="en">Every summer, thousands of vacationers suffer theft or loss of their belongings at the beach. Safe Beach offers a real solution with connected, secure and autonomous lockers for everyone.</p>
+
+    <h2 class="fr">Téléchargements</h2>
+    <h2 class="en">Downloads</h2>
+    <div class="buttons">
+      <a class="download-btn" href="Dossier_Aide_SafeBeach.pdf" target="_blank">📥 Dossier Mairie (PDF)</a>
+      <a class="download-btn" href="Flyer_SafeBeach.pdf" target="_blank">📄 Flyer Safe Beach</a>
+    </div>
+
+    <h2 class="fr">Contact</h2>
+    <h2 class="en">Contact</h2>
+    <form action="https://formspree.io/f/mwkgybvo" method="POST">
+      <input type="text" name="name" placeholder="Nom / Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit" class="fr">Envoyer</button>
+      <button type="submit" class="en">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <a href="partenaires.html">👥 Page Partenaires</a><br />
+    &copy; 2025 Safe Beach. Tous droits réservés.
+  </footer>
+</body>
+</html>
