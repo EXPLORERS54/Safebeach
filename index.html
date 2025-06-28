@@ -1,73 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safe Beach</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #e0f7fa;
-        }
-        header {
-            background-color: #00acc1;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        section {
-            padding: 2em;
-        }
-        .hero {
-            background-image: url('images/mer.jpg.jpg');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 6em 1em;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 2em;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #006064;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            margin-top: 2em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safe Beach</title>
+  <!-- Feuille de styles principale -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Framework CSS (Bootstrap) pour mise en page responsive et menu -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-LY+zReg...yourhash..." crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Safe Beach</h1>
-        <p>Des casiers sécurisés à la plage</p>
-    </header>
-    <section class="hero">
-        <h2>Protégez vos affaires en toute simplicité</h2>
-        <p>Installez, verrouillez, profitez !</p>
-    </section>
-    <section>
-        <h2 style="text-align:center;">Galerie</h2>
-        <div class="gallery">
-            <img src="images/cadenas-igloohome.png" alt="Cadenas Igloohome">
-            <img src="images/casier-type.png" alt="Casier connecté">
-            <img src="images/exemple-concept-1.webp" alt="Concept 1">
-            <img src="images/exemple-concept-2.webp" alt="Concept 2">
+  <!-- En-tête / section d'accueil -->
+  <header id="accueil" class="bg-light text-center py-5">
+    <div class="container">
+      <h1>Bienvenue sur <strong>Safe Beach</strong></h1>
+      <p>La solution complète pour la gestion de la sécurité des plages et des sauveteurs.</p>
+      <!-- Image de présentation (optionnelle) -->
+      <!-- <img src="images/accueil.jpg" alt="Plage en s&eacute;curit&eacute;" class="img-fluid"> -->
+    </div>
+  </header>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+      <!-- Logo / marque du site -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.png" alt="Safe Beach" style="height:40px; margin-right:10px;">
+        Safe Beach
+      </a>
+      <!-- Bouton burger pour mobiles -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" 
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Liens de menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#comment-ca-marche">Comment ça marche</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tarifs">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section Comment ça marche -->
+  <section id="comment-ca-marche" class="py-5">
+    <div class="container">
+      <h2>Comment ça marche</h2>
+      <p>Safe Beach est une plateforme web et mobile conçue pour aider à gérer efficacement les postes de secours et la surveillance des plages. Elle permet de prévenir les incidents et d’optimiser la sécurité des baigneurs en temps réel.</p>
+      <!-- Exemple de présentation en 3 étapes -->
+      <div class="row text-center mt-4">
+        <div class="col-md-4 mb-4">
+          <img src="images/etape1.png" alt="Inscription des sauveteurs" class="mb-2" style="max-width:80px;">
+          <h3 class="h5">Inscription</h3>
+          <p class="small">Inscrivez vos postes de secours et sauveteurs sur la plateforme Safe Beach.</p>
         </div>
-    </section>
-    <footer>
-        <p>Contactez-nous pour en savoir plus</p>
-    </footer>
+        <div class="col-md-4 mb-4">
+          <img src="images/etape2.png" alt="Surveillance en temps r&eacute;el" class="mb-2" style="max-width:80px;">
+          <h3 class="h5">Surveillance</h3>
+          <p class="small">Surveillez en temps r&eacute;el les conditions de la plage (m&eacute;t&eacute;o, drapeau, incidents).</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="images/etape3.png" alt="Alertes et interventions" class="mb-2" style="max-width:80px;">
+          <h3 class="h5">Intervention</h3>
+          <p class="small">Recevez des alertes imm&eacute;diates et coordonnez les interventions si n&eacute;cessaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Tarifs -->
+  <section id="tarifs" class="py-5 bg-light">
+    <div class="container">
+      <h2>Tarifs</h2>
+      <p>Nous proposons plusieurs formules adapt&eacute;es &agrave; vos besoins en mati&egrave;re de surveillance de plage. Contactez-nous pour obtenir un devis personnalis&eacute;.</p>
+      <!-- Exemple de cartes de tarifs -->
+      <div class="row text-center mt-4">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Basic</h3>
+              <p class="card-text">Fonctionnalit&eacute;s essentielles pour une plage unique.<br><strong>Gratuit</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Pro</h3>
+              <p class="card-text">Gestion multi-plages, rapports avanc&eacute;s et alertes en direct.<br><strong>Nous consulter</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h5">Entreprise</h3>
+              <p class="card-text">Support d&eacute;di&eacute; et int&eacute;grations sur mesure pour collectivites.<br><strong>Nous consulter</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Pour toute demande d’informations ou pour planifier une d&eacute;monstration, n’h&eacute;sitez pas &agrave; nous contacter :</p>
+      <!-- Formulaire de contact -->
+      <form action="mailto:info@safebeach.es" method="post" enctype="text/plain" class="mb-3">
+        <div class="form-group">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="Nom" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="Email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="Message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+      <p>Vous pouvez &eacute;galement nous joindre par t&eacute;l&eacute;phone au <strong>+34 600 261 758</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="text-center py-4 bg-dark text-white">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Safe Beach. Tous droits r&eacute;serv&eacute;s.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts JS (Bootstrap et d&eacute;pendances) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-Df...yourhash..." crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/js/bootstrap.bundle.min.js" integrity="sha384-X...yourhash..." crossorigin="anonymous"></script>
 </body>
 </html>
